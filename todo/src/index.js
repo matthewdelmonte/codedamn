@@ -8,7 +8,7 @@ const container = document.getElementById('root');
 
 const root = ReactDOM.createRoot(container);
 
-root.render(<App name='TODO App' />);
+root.render(<App name='TODO List' />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
