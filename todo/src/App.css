@@ -18,6 +18,10 @@ button {
   margin-top: 15px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 ul {
   display: grid;
   place-items: center;
@@ -30,6 +34,12 @@ li {
   list-style-type: none;
   width: 300px;
   margin-top: 15px;
+  padding-top: 5px;
+}
+
+.complete {
+  background-color: grey;
+  text-decoration: line-through;
 }
 
 #task {
