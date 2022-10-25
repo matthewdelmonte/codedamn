@@ -10,11 +10,12 @@ function App() {
   const addTask = () => {
     setTodolist([...todolist, currentTask])
     ref.current.value = "";
+    setCurrentTask("");
     console.log(todolist)
   }
 
-  const removeTask = () => {
-    setTodolist((...todolist) => todolist.filter((_, index) => index !== _.key));
+  const deleteTask = (taskToDelete) => {
+    setTodolist(todolist.filter((item) => {return item !== taskToDelete}));
   }
 
   return (
@@ -25,16 +26,17 @@ function App() {
         <button onClick={addTask}> Add Task </button>
       </div>
       <hr />
-      <div className="list">
-        {todolist.map((li, key) => {
-          return <div className="list-items">
-                    <label key={key}>{li}</label>
-                    <input type={"checkbox"} id={key} /> 
-                    <button onClick={removeTask}> Remove </button>
-                  </div>;
-          })
-        }
-      </div>
+      <ul>
+        {todolist.map((task, key) => {
+          return (
+            <div id="task">
+              <li key={key}>{task}</li>
+              <button onClick={() => deleteTask(task)}> Remove </button>
+            </div>
+          )
+        })
+      }
+    </ul>
     </div>
   );
 }
