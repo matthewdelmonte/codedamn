@@ -5,12 +5,12 @@ import "./style.css";
 
 function Menu() {
     // eslint-disable-next-line
-    const { gameState, setGameState } = useContext(GameStateContext);
+    const { gameState, setGameState, userName, setUserName } = useContext(GameStateContext);
 
     return (
         <div className="menu">
             <label>Enter your name:</label>
-            <input type="text" placeholder="Ex. Rich Roll" />
+            <input type="text" placeholder="Ex. Rich Roll" onChange={(event) => {setUserName(event.target.value)}}/>
             <button onClick={() => {setGameState('playing')}}>Start Quiz</button>
         </div>
     );
