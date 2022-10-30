@@ -11,9 +11,18 @@ export const Questions = [
     {
         prompt: "What is the Rust compiler called?",
         option1: "Webpack",
-        option2: "gcc",
-        option3: "V8",
-        option4: "cargo",
-        answer: "option4"
+        option2: "Cargo",
+        option3: "gcc",
+        option4: "V8",
+        answer: "option2"
+    },
+    {
+        prompt: "Which of these is not a JS framework?",
+        option1: "React",
+        option2: "Angular",
+        option3: "Java",
+        option4: "Vue",
+        answer: "option3"
     }
+
 ];
