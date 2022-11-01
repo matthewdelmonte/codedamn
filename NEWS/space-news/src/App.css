@@ -1,8 +1,32 @@
 .App {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-header {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 500px;
+  height: 400px;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: 500;
+  width: 100%;
+  font-size: 22px;
+  margin: 0;
+}
+
+.article {
+  border-bottom-style: solid;
+  max-width: 1150px;
+}
+
+.newsContainer {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -11,4 +35,5 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px;
 }
