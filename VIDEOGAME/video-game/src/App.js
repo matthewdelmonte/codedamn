@@ -1,9 +1,14 @@
 import './App.css';
+import Search from './components/Search';
+import Latest from './components/Latest';
 
 function App() {
   return (
     <div className="App">
-    <h2>Video Game App</h2>
+      <div className="App-container">
+        <Search />
+        <Latest />
+      </div>
     </div>
   );
 }
